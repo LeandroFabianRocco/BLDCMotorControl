@@ -60,7 +60,7 @@ instance:
     - ftm_config:
       - clockSource: 'kFTM_FixedClock'
       - clockSourceFreq: 'GetFreq'
-      - prescale: 'kFTM_Prescale_Divide_16'
+      - prescale: 'kFTM_Prescale_Divide_1'
       - timerFrequency: '50'
       - bdmMode: 'kFTM_BdmMode_0'
       - pwmSyncMode: 'kFTM_SoftwareTrigger'
@@ -95,12 +95,12 @@ instance:
         - edge_aligned_pwm:
           - chnlNumber: 'kFTM_Chnl_1'
           - level: 'kFTM_HighTrue'
-          - dutyCyclePercent: '5'
+          - dutyCyclePercent: '8'
           - enable_chan_irq: 'false'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 const ftm_config_t FTM0_config = {
-  .prescale = kFTM_Prescale_Divide_16,
+  .prescale = kFTM_Prescale_Divide_1,
   .bdmMode = kFTM_BdmMode_0,
   .pwmSyncMode = kFTM_SoftwareTrigger,
   .reloadPoints = 0,
@@ -123,7 +123,7 @@ const ftm_chnl_pwm_signal_param_t FTM0_pwmSignalParams[] = {
   {
     .chnlNumber = kFTM_Chnl_1,
     .level = kFTM_HighTrue,
-    .dutyCyclePercent = 5
+    .dutyCyclePercent = 8
   }
 };
 

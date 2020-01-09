@@ -905,7 +905,7 @@
                         <struct name="ftm_config">
                            <setting name="clockSource" value="kFTM_FixedClock"/>
                            <setting name="clockSourceFreq" value="GetFreq"/>
-                           <setting name="prescale" value="kFTM_Prescale_Divide_16"/>
+                           <setting name="prescale" value="kFTM_Prescale_Divide_1"/>
                            <setting name="timerFrequency" value="50"/>
                            <setting name="bdmMode" value="kFTM_BdmMode_0"/>
                            <set name="pwmSyncMode">
@@ -959,7 +959,7 @@
                               <struct name="edge_aligned_pwm">
                                  <setting name="chnlNumber" value="kFTM_Chnl_1"/>
                                  <setting name="level" value="kFTM_HighTrue"/>
-                                 <setting name="dutyCyclePercent" value="5"/>
+                                 <setting name="dutyCyclePercent" value="8"/>
                                  <setting name="enable_chan_irq" value="false"/>
                               </struct>
                            </struct>
@@ -973,7 +973,7 @@
             <component name="system" uuid="957ebb1d-7fe6-4f38-9f5a-fe8179519466" type_id="system">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="0da4971f-f939-4471-bf08-dfe27beff81e" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="f36e7710-2fbc-4594-b9a2-6809964fe9a9" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>
