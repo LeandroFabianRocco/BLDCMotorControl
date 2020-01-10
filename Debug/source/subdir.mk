@@ -5,14 +5,20 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../source/BLDCMotorControl.c \
+../source/Delays.c \
+../source/PWM_functions.c \
 ../source/semihost_hardfault.c 
 
 OBJS += \
 ./source/BLDCMotorControl.o \
+./source/Delays.o \
+./source/PWM_functions.o \
 ./source/semihost_hardfault.o 
 
 C_DEPS += \
 ./source/BLDCMotorControl.d \
+./source/Delays.d \
+./source/PWM_functions.d \
 ./source/semihost_hardfault.d 
 
 

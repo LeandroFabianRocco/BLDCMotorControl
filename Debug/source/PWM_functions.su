@@ -1,0 +1,2 @@
+fsl_ftm.h:962:20:FTM_SetSoftwareTrigger	16	static
+PWM_functions.c:13:6:set_pwm_CnV	16	static

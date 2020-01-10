@@ -40,7 +40,8 @@
 #include "MK64F12.h"
 #include "fsl_debug_console.h"
 /* TODO: insert other include files here. */
-
+#include "PWM_functions.h"
+#include "Delays.h"
 /* TODO: insert other definitions and declarations here. */
 
 /*
@@ -54,17 +55,23 @@ int main(void) {
     BOARD_InitBootPeripherals();
   	/* Init FSL debug console. */
     BOARD_InitDebugConsole();
+    // Inicializo los delays
+    SysTick_init();
 
     PRINTF("Hello World\n");
 
     /* Force the counter to be placed into memory. */
-    volatile static int i = 0 ;
+    volatile static int i = 33;
     /* Enter an infinite loop, just incrementing a counter. */
     while(1) {
+    	SysTick_DelayTicks(1000U);
+    	set_pwm_CnV(i, PWM_CH0);
         i++ ;
+        if (i >= 65)
+        	i = 33;
         /* 'Dummy' NOP to allow source level single stepping of
             tight while() loop */
-        __asm volatile ("nop");
+        //__asm volatile ("nop");
     }
     return 0 ;
 }
