@@ -13,6 +13,8 @@
  ************************************************************************/
 #include "fsl_ftm.h"
 #include "stdint.h"
+#include "Delays.h"
+#include "RGB_LEDS.h"
 
 /*************************************************************************
  * Definiciones
@@ -23,10 +25,14 @@
 #define PWM_CH2 2U
 #define PWM_CH3 3U
 
+#define MAX_THROTTLE 196U
+#define MIN_THROTTLE 97U
+
 /*************************************************************************
  * Prototipos
  ************************************************************************/
 void set_pwm_CnV(uint32_t value, uint8_t ch);
 
+void throttle_init(void);
 
 #endif /* PWM_FUNCTIONS_H_ */

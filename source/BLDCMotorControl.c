@@ -42,6 +42,7 @@
 /* TODO: insert other include files here. */
 #include "PWM_functions.h"
 #include "Delays.h"
+#include "RGB_LEDS.h"
 /* TODO: insert other definitions and declarations here. */
 
 /*
@@ -57,18 +58,36 @@ int main(void) {
     BOARD_InitDebugConsole();
     // Inicializo los delays
     SysTick_init();
+    RGB_LED_init();
 
+    throttle_init();
+
+    // Testeo el máximo y mínimo
+    SysTick_DelayTicks(3000U);
+    set_pwm_CnV(MAX_THROTTLE, PWM_CH0);
+    set_pwm_CnV(MAX_THROTTLE, PWM_CH1);
+    SysTick_DelayTicks(3000U);
+    set_pwm_CnV(MIN_THROTTLE, PWM_CH0);
+    set_pwm_CnV(MIN_THROTTLE, PWM_CH1);
+    SysTick_DelayTicks(3000U);
+    set_pwm_CnV(MAX_THROTTLE, PWM_CH0);
+    set_pwm_CnV(MAX_THROTTLE, PWM_CH1);
+    SysTick_DelayTicks(3000U);
+    set_pwm_CnV(MIN_THROTTLE, PWM_CH0);
+    set_pwm_CnV(MIN_THROTTLE, PWM_CH1);
+
+    GPIO_PortClear(RED_LED_GPIO, 1u << RED_LED);
     PRINTF("Hello World\n");
 
     /* Force the counter to be placed into memory. */
-    volatile static int i = 33;
+    volatile static int i = 97;
     /* Enter an infinite loop, just incrementing a counter. */
     while(1) {
     	SysTick_DelayTicks(1000U);
     	set_pwm_CnV(i, PWM_CH0);
         i++ ;
-        if (i >= 65)
-        	i = 33;
+        if (i >= 196)
+        	i = 97;
         /* 'Dummy' NOP to allow source level single stepping of
             tight while() loop */
         //__asm volatile ("nop");

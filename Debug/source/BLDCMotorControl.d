@@ -25,7 +25,7 @@ source/BLDCMotorControl.o source/BLDCMotorControl.d: \
  /home/leandro/MEGA/Dron/FreedomProjects/BLDCMotorControl/component/serial_manager/serial_manager.h \
  /home/leandro/MEGA/Dron/FreedomProjects/BLDCMotorControl/component/serial_manager/serial_port_uart.h \
  /home/leandro/MEGA/Dron/FreedomProjects/BLDCMotorControl/component/uart/uart.h \
- ../source/PWM_functions.h ../source/Delays.h
+ ../source/PWM_functions.h ../source/Delays.h ../source/RGB_LEDS.h
 
 /home/leandro/MEGA/Dron/FreedomProjects/BLDCMotorControl/board/board.h:
 
@@ -80,3 +80,5 @@ source/BLDCMotorControl.o source/BLDCMotorControl.d: \
 ../source/PWM_functions.h:
 
 ../source/Delays.h:
+
+../source/RGB_LEDS.h:
