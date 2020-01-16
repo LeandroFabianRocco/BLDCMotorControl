@@ -1,2 +1,4 @@
+fsl_gpio.h:175:20:GPIO_PortSet	16	static
 fsl_gpio.h:186:20:GPIO_PortClear	16	static
-BLDCMotorControl.c:51:5:main	8	static
+fsl_gpio.h:216:24:GPIO_PinRead	16	static
+BLDCMotorControl.c:51:5:main	16	static
