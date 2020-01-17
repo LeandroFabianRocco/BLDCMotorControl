@@ -23,7 +23,7 @@ void set_pwm_CnV(uint32_t value, uint8_t ch)
 void throttle_init(void)
 {
 
-	GPIO_PortClear(BLUE_LED_GPIO, 1u << BLUE_LED);
+	//GPIO_PortClear(BLUE_LED_GPIO, 1u << BLUE_LED);
 	//SysTick_DelayTicks(5000U); // Tiempo de espera para conectar la batería
 	// Configuro máximo throttle
 	set_pwm_CnV(MAX_THROTTLE, PWM_CH0);

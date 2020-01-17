@@ -80,21 +80,40 @@ int main(void) {
     PRINTF("Hello World\n");
     uint32_t pin_status, pin_status2;
     /* Force the counter to be placed into memory. */
-    //volatile static int i = 97;
+    volatile static int i = MIN_THROTTLE;
+    set_pwm_CnV(MIN_THROTTLE, PWM_CH0);
+    set_pwm_CnV(MIN_THROTTLE, PWM_CH1);
     /* Enter an infinite loop, just incrementing a counter. */
     while(1) {
-    	SysTick_DelayTicks(20U);
+
     	pin_status = GPIO_PinRead(SW3_MIN_GPIO, SW3_MIN_PIN);
-    	if (pin_status != 0)
-    		GPIO_PortSet(GREEN_LED_GPIO, 1u << GREEN_LED);
-    	else
+    	if (pin_status == 0)
+    	{
     		GPIO_PortClear(GREEN_LED_GPIO, 1u << GREEN_LED);
+    		GPIO_PortSet(BLUE_LED_GPIO, 1u << BLUE_LED);
+    		/*set_pwm_CnV(MAX_THROTTLE, PWM_CH0);
+    		set_pwm_CnV(MAX_THROTTLE, PWM_CH1);*/
+    		i++;
+    		set_pwm_CnV(i, PWM_CH0);
+    		set_pwm_CnV(i, PWM_CH1);
+    		//PRINTF(i);
+    		SysTick_DelayTicks(50U);
+    	}
 
     	pin_status2 = GPIO_PinRead(SW2_MAX_GPIO, SW2_MAX_PIN);
-		if (pin_status2 != 0)
-			GPIO_PortSet(BLUE_LED_GPIO, 1u << BLUE_LED);
-		else
+		if (pin_status2 == 0)
+		{
 			GPIO_PortClear(BLUE_LED_GPIO, 1u << BLUE_LED);
+			GPIO_PortSet(GREEN_LED_GPIO, 1u << GREEN_LED);
+			/*set_pwm_CnV(MIN_THROTTLE, PWM_CH0);
+			set_pwm_CnV(MIN_THROTTLE, PWM_CH1);*/
+			i--;
+			set_pwm_CnV(i, PWM_CH0);
+			set_pwm_CnV(i, PWM_CH1);
+			//PRINTF(i);
+			SysTick_DelayTicks(50U);
+		}
+
     	//set_pwm_CnV(i, PWM_CH0);
         //i++ ;
         //if (i >= 196)

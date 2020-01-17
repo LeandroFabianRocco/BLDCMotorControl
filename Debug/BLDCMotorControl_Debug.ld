@@ -6,7 +6,7 @@
  * Generated linker script file for MK64FN1M0xxx12
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v11.1.0 [Build 3209] [2019-12-12] on 15/01/2020 21:25:19
+ * MCUXpresso IDE v11.1.0 [Build 3209] [2019-12-12] on 17/01/2020 19:19:25
  */
 
 INCLUDE "BLDCMotorControl_Debug_library.ld"
