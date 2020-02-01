@@ -1,4 +1,3 @@
-# Control de un motor BLDC con la FRDM-K64F
 # Controlling a BLDC motor using the FRDM-K64F development board
 
 This project uses the PWM libraries to control a BLDC motor with a ESC controller. Particularly, the script switch between low and full throttle using the two push buttoms of the board, with the objective of configure th ESC to control the BLDC motor.
