@@ -88,14 +88,14 @@ instance:
         - edge_aligned_pwm:
           - chnlNumber: 'kFTM_Chnl_0'
           - level: 'kFTM_HighTrue'
-          - dutyCyclePercent: '5'
+          - dutyCyclePercent: '10'
           - enable_chan_irq: 'false'
       - 1:
         - edge_aligned_mode: 'kFTM_EdgeAlignedPwm'
         - edge_aligned_pwm:
           - chnlNumber: 'kFTM_Chnl_1'
           - level: 'kFTM_HighTrue'
-          - dutyCyclePercent: '8'
+          - dutyCyclePercent: '10'
           - enable_chan_irq: 'false'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -118,12 +118,12 @@ const ftm_chnl_pwm_signal_param_t FTM0_pwmSignalParams[] = {
   {
     .chnlNumber = kFTM_Chnl_0,
     .level = kFTM_HighTrue,
-    .dutyCyclePercent = 5
+    .dutyCyclePercent = 10
   },
   {
     .chnlNumber = kFTM_Chnl_1,
     .level = kFTM_HighTrue,
-    .dutyCyclePercent = 8
+    .dutyCyclePercent = 10
   }
 };
 

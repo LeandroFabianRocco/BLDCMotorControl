@@ -96,7 +96,7 @@ int main(void) {
     		i++;
     		set_pwm_CnV(i, PWM_CH0);
     		set_pwm_CnV(i, PWM_CH1);
-    		//PRINTF(i);
+    		PRINTF("%d\r\n", i);
     		SysTick_DelayTicks(50U);
     	}
 
@@ -110,7 +110,7 @@ int main(void) {
 			i--;
 			set_pwm_CnV(i, PWM_CH0);
 			set_pwm_CnV(i, PWM_CH1);
-			//PRINTF(i);
+			PRINTF("%d\r\n", i);
 			SysTick_DelayTicks(50U);
 		}
 

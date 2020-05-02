@@ -61,7 +61,7 @@ instance:
       - clockSource: 'kFTM_FixedClock'
       - clockSourceFreq: 'GetFreq'
       - prescale: 'kFTM_Prescale_Divide_1'
-      - timerFrequency: '50'
+      - timerFrequency: '400'
       - bdmMode: 'kFTM_BdmMode_0'
       - pwmSyncMode: 'kFTM_SoftwareTrigger'
       - reloadPoints: ''
@@ -129,7 +129,7 @@ const ftm_chnl_pwm_signal_param_t FTM0_pwmSignalParams[] = {
 
 void FTM0_init(void) {
   FTM_Init(FTM0_PERIPHERAL, &FTM0_config);
-  FTM_SetupPwm(FTM0_PERIPHERAL, FTM0_pwmSignalParams, sizeof(FTM0_pwmSignalParams) / sizeof(ftm_chnl_pwm_signal_param_t), kFTM_EdgeAlignedPwm, 50U, FTM0_CLOCK_SOURCE);
+  FTM_SetupPwm(FTM0_PERIPHERAL, FTM0_pwmSignalParams, sizeof(FTM0_pwmSignalParams) / sizeof(ftm_chnl_pwm_signal_param_t), kFTM_EdgeAlignedPwm, 400U, FTM0_CLOCK_SOURCE);
   FTM_StartTimer(FTM0_PERIPHERAL, kFTM_FixedClock);
 }
 

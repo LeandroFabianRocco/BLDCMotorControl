@@ -945,7 +945,7 @@
                            <setting name="clockSource" value="kFTM_FixedClock"/>
                            <setting name="clockSourceFreq" value="GetFreq"/>
                            <setting name="prescale" value="kFTM_Prescale_Divide_1"/>
-                           <setting name="timerFrequency" value="50"/>
+                           <setting name="timerFrequency" value="400"/>
                            <setting name="bdmMode" value="kFTM_BdmMode_0"/>
                            <set name="pwmSyncMode">
                               <selected>
@@ -1012,7 +1012,7 @@
             <component name="system" uuid="957ebb1d-7fe6-4f38-9f5a-fe8179519466" type_id="system">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="9e752287-e397-40ed-a2b6-4c2bbcf11b6a" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="415f4052-94a7-48a6-937f-97706df7d80c" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>
