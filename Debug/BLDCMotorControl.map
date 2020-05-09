@@ -5574,7 +5574,7 @@ END GROUP
                 0x0000000014001000                __top_FLEX_RAM = 0x14001000
                 0x0000000014001000                __top_RAM3 = 0x14001000
 
-.text           0x0000000000000000     0x4658
+.text           0x0000000000000000     0x4650
  FILL mask 0xff
                 0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
  *(SORT_BY_ALIGNMENT(.isr_vector))
@@ -5584,13 +5584,13 @@ END GROUP
                 0x0000000000000198                . = ALIGN (0x4)
                 0x0000000000000198                __section_table_start = .
                 0x0000000000000198                __data_section_table = .
-                0x0000000000000198        0x4 LONG 0x4658 LOADADDR (.data)
+                0x0000000000000198        0x4 LONG 0x4650 LOADADDR (.data)
                 0x000000000000019c        0x4 LONG 0x20000000 ADDR (.data)
                 0x00000000000001a0        0x4 LONG 0x10 SIZEOF (.data)
-                0x00000000000001a4        0x4 LONG 0x4658 LOADADDR (.data_RAM2)
+                0x00000000000001a4        0x4 LONG 0x4650 LOADADDR (.data_RAM2)
                 0x00000000000001a8        0x4 LONG 0x1fff0000 ADDR (.data_RAM2)
                 0x00000000000001ac        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x00000000000001b0        0x4 LONG 0x4658 LOADADDR (.data_RAM3)
+                0x00000000000001b0        0x4 LONG 0x4650 LOADADDR (.data_RAM3)
                 0x00000000000001b4        0x4 LONG 0x14000000 ADDR (.data_RAM3)
                 0x00000000000001b8        0x4 LONG 0x0 SIZEOF (.data_RAM3)
                 0x00000000000001bc                __data_section_table_end = .
@@ -6432,58 +6432,58 @@ END GROUP
                 0x0000000000004564       0x1c ./board/peripherals.o
                 0x0000000000004564                FTM0_config
  .rodata.FTM0_pwmSignalParams
-                0x0000000000004580        0xa ./board/peripherals.o
+                0x0000000000004580        0x5 ./board/peripherals.o
                 0x0000000000004580                FTM0_pwmSignalParams
- *fill*         0x000000000000458a        0x2 ff
+ *fill*         0x0000000000004585        0x3 ff
  .rodata.PORT_SetPinConfig.str1.4
-                0x000000000000458c       0x5c ./board/pin_mux.o
+                0x0000000000004588       0x5c ./board/pin_mux.o
                                          0x59 (size before relaxing)
  .rodata.__num_Ciob_streams
-                0x00000000000045e8        0x4 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_semihost_nf.a(__ciob.o)
-                0x00000000000045e8                __num_Ciob_streams
+                0x00000000000045e4        0x4 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_semihost_nf.a(__ciob.o)
+                0x00000000000045e4                __num_Ciob_streams
  .rodata.__assertion_failed.str1.1
-                0x00000000000045ec       0x15 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_semihost_nf.a(_cr_assert.o)
+                0x00000000000045e8       0x15 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_semihost_nf.a(_cr_assert.o)
  .rodata._Csys_alloc.str1.1
-                0x0000000000004601       0x18 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(alloc.o)
+                0x00000000000045fd       0x18 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(alloc.o)
  .rodata._initio.str1.1
-                0x0000000000004619        0x4 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(initio.o)
+                0x0000000000004615        0x4 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(initio.o)
  .rodata.__vfprintf.str1.1
-                0x000000000000461d       0x35 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(printf.o)
+                0x0000000000004619       0x35 /usr/local/mcuxpressoide-11.1.1_3241/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.202001081728/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(printf.o)
                                          0x38 (size before relaxing)
-                0x0000000000004658                . = ALIGN (0x8)
- *fill*         0x0000000000004652        0x6 ff
+                0x0000000000004650                . = ALIGN (0x8)
+ *fill*         0x000000000000464e        0x2 ff
 
-.glue_7         0x0000000000004658        0x0
- .glue_7        0x0000000000004658        0x0 linker stubs
+.glue_7         0x0000000000004650        0x0
+ .glue_7        0x0000000000004650        0x0 linker stubs
 
-.glue_7t        0x0000000000004658        0x0
- .glue_7t       0x0000000000004658        0x0 linker stubs
+.glue_7t        0x0000000000004650        0x0
+ .glue_7t       0x0000000000004650        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000004658        0x0
- .vfp11_veneer  0x0000000000004658        0x0 linker stubs
+.vfp11_veneer   0x0000000000004650        0x0
+ .vfp11_veneer  0x0000000000004650        0x0 linker stubs
 
-.v4_bx          0x0000000000004658        0x0
- .v4_bx         0x0000000000004658        0x0 linker stubs
+.v4_bx          0x0000000000004650        0x0
+ .v4_bx         0x0000000000004650        0x0 linker stubs
 
-.iplt           0x0000000000004658        0x0
- .iplt          0x0000000000004658        0x0 ./startup/startup_mk64f12.o
+.iplt           0x0000000000004650        0x0
+ .iplt          0x0000000000004650        0x0 ./startup/startup_mk64f12.o
 
-.rel.dyn        0x0000000000004658        0x0
- .rel.iplt      0x0000000000004658        0x0 ./startup/startup_mk64f12.o
+.rel.dyn        0x0000000000004650        0x0
+ .rel.iplt      0x0000000000004650        0x0 ./startup/startup_mk64f12.o
 
 .ARM.extab
  *(SORT_BY_ALIGNMENT(.ARM.extab*) SORT_BY_ALIGNMENT(.gnu.linkonce.armextab.*))
 
-.ARM.exidx      0x0000000000004658        0x0
-                0x0000000000004658                __exidx_start = .
+.ARM.exidx      0x0000000000004650        0x0
+                0x0000000000004650                __exidx_start = .
  *(SORT_BY_ALIGNMENT(.ARM.exidx*) SORT_BY_ALIGNMENT(.gnu.linkonce.armexidx.*))
-                0x0000000000004658                __exidx_end = .
-                0x0000000000004658                _etext = .
+                0x0000000000004650                __exidx_end = .
+                0x0000000000004650                _etext = .
 
 .m_usb_data
  *(SORT_BY_ALIGNMENT(m_usb_bdt))
 
-.data_RAM2      0x000000001fff0000        0x0 load address 0x0000000000004658
+.data_RAM2      0x000000001fff0000        0x0 load address 0x0000000000004650
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2 = .)
                 [!provide]                        PROVIDE (__start_data_SRAM_LOWER = .)
@@ -6497,7 +6497,7 @@ END GROUP
                 [!provide]                        PROVIDE (__end_data_RAM2 = .)
                 [!provide]                        PROVIDE (__end_data_SRAM_LOWER = .)
 
-.data_RAM3      0x0000000014000000        0x0 load address 0x0000000000004658
+.data_RAM3      0x0000000014000000        0x0 load address 0x0000000000004650
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM3 = .)
                 [!provide]                        PROVIDE (__start_data_FLEX_RAM = .)
@@ -6518,7 +6518,7 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x8)
                 0x0000000020000000                _end_uninit_RESERVED = .
 
-.data           0x0000000020000000       0x10 load address 0x0000000000004658
+.data           0x0000000020000000       0x10 load address 0x0000000000004650
  FILL mask 0xff
                 0x0000000020000000                _data = .
                 [!provide]                        PROVIDE (__start_data_RAM = .)
@@ -6542,7 +6542,7 @@ END GROUP
                 [!provide]                        PROVIDE (__end_data_RAM = .)
                 [!provide]                        PROVIDE (__end_data_SRAM_UPPER = .)
 
-.igot.plt       0x0000000020000010        0x0 load address 0x0000000000004668
+.igot.plt       0x0000000020000010        0x0 load address 0x0000000000004660
  .igot.plt      0x0000000020000010        0x0 ./startup/startup_mk64f12.o
 
 .bss_RAM2       0x000000001fff0000        0x0
@@ -6691,8 +6691,8 @@ END GROUP
                 0x000000002002f000                . = ALIGN (0x8)
                 0x0000000020030000                _vStackTop = (. + _StackSize)
                 0x0000000000000000                _image_start = LOADADDR (.text)
-                0x0000000000004668                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x0000000000004668                _image_size = (_image_end - _image_start)
+                0x0000000000004660                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x0000000000004660                _image_size = (_image_end - _image_start)
 OUTPUT(BLDCMotorControl.axf elf32-littlearm)
 
 .debug_info     0x0000000000000000    0x1b75c
